@@ -54,6 +54,11 @@ table {
 	border-spacing: 0;
 }
 
+button {
+	background-color: transparent;
+	border: none;
+}
+
 section {
 	margin-block: 6em;
 }
@@ -143,10 +148,18 @@ header {
 	background-color: #ffffff00;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dot_selected {
 	background-color: #fff;
+}
+
+.arrow:hover{
+	cursor: pointer;
+}
+
+.dot:hover{
+	cursor: pointer;
 }
 /* Fin du code CSS pour le carousel */
 #banner p {

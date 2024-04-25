@@ -21,9 +21,24 @@ const slides = [
 const bannerImg = document.querySelector('.banner-img');
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
-const dots = document.querySelectorAll('.dot'); // Sélectionnez tous les points
+
 
 let currentIndex = 0;
+
+const dotsContainer = document.querySelector('.dots');
+slides.forEach((slide, i)=>{
+    const dot = document.createElement("div")
+    dot.classList.add("dot")
+    dotsContainer.appendChild(dot)
+    dot.addEventListener("click", function(){
+        currentIndex = (i);
+        updateCarousel(currentIndex, 'left');
+        updateDots(currentIndex); // Mettez à jour les points indicateurs
+    })
+})
+
+const dots = document.querySelectorAll('.dot'); // Sélectionnez tous les points
+
 
 // Fonction pour mettre à jour les points indicateurs
 function updateDots(index) {
